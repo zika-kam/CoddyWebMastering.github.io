@@ -46,14 +46,12 @@
 		<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			const items = document.querySelectorAll('.item');
-				let n = 300;
+				let n = 1200;
 				items.forEach(function(img) {
-						
-						setTimeout(function () { 
-							img.setAttribute('style', img.getAttribute('data-style'));
-							img.className += ' animated'; 
-						}, n);
-					n += 300;	
+					img.setAttribute('style', img.getAttribute('data-style'));
+					console.log('loaded');
+					setTimeout(function () { img.className += ' animated'; console.log('visible', n)}, n);
+					n += 400;
 				});
 		});
 		</script>
