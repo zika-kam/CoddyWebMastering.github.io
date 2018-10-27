@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
 		<title>Галерея</title>
+		<link rel="stylesheet" href="css/main.css">
 		<style>
 			.link_wrapper {
 				background-color: #eee;
@@ -19,7 +20,7 @@
 
 			
 		</style>
-		<link rel="stylesheet" href="css/main.css">
+		
 
 	</head>
 	<body>
@@ -46,11 +47,14 @@
 				const items = document.querySelectorAll('.item');
 				let n = 300;
 				items.forEach(function(img) {
-					setTimeout(function () { 
-						img.setAttribute('style', img.getAttribute('data-style'));
-						img.className += ' animated';
-					}, n);
+					img.onload = function() {
+						setTimeout(function () { 
+							img.setAttribute('style', img.getAttribute('data-style'));
+							img.className += ' animated';
+						}, n);
+					}
 					n += 300;
+					
 				});
 			}
 		</script>
