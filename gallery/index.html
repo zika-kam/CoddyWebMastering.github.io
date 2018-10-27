@@ -13,7 +13,7 @@
 			.item {
 				transition: 0.4s;
 				opacity: 0;
-				background: transparent;
+				background-color: transparent;
 			}
 			.animated {
 				opacity: 1;
@@ -44,19 +44,17 @@
 			</div>
 		</main>
 		<script>
-		(function() {
-		
-				const items = document.querySelectorAll('.item');
+		document.addEventListener('DOMContentLoaded', function() {
+			const items = document.querySelectorAll('.item');
 				let n = 300;
 				items.forEach(function(img) {
 						img.setAttribute('style', img.getAttribute('data-style'));
 						setTimeout(function () { 
 							img.className += ' animated'; 
 						}, n);
-					
 					n += 300;	
 				});
-		})();
+		});
 		</script>
 	</body>
 </html>
