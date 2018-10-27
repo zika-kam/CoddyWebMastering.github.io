@@ -43,16 +43,14 @@
 			</div>
 		</main>
 		<script>
-// 		window.onload = function() {
-		(function() {
+// 				(function() {
 		
 				const items = document.querySelectorAll('.item');
 				let n = 300;
 				items.forEach(function(img) {
-					
+						img.setAttribute('style', img.getAttribute('data-style'));
 						setTimeout(function () { 
-							img.setAttribute('style', img.getAttribute('data-style'));
-							img.className += ' animated';
+							img.className += ' animated'; 
 						}, n);
 					
 					n += 300;	
