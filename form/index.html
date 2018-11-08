@@ -142,11 +142,17 @@
 			return input.getAttribute('type') != 'submit';
 		});
 
+		
+
 		var textarea = document.getElementById('message');
 		textarea.addEventListener('focusin', focusinInputHandler, false);
 		textarea.addEventListener('focusout', focusoutInputHandler, false);
 		if (textarea.value != '')
 			focusinInputHandler.call(textarea);
+
+		if(/iPhone|iPad|iPod/i.test(navigator.userAgent)){
+			textarea.style['text-indent'] = '-3px';
+		}
 
 		inputs.forEach(function(input) {
 				// if (input.getAttribute('type') !== 'submit' && input.getAttribute('type') !== 'hidden') {
