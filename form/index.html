@@ -46,7 +46,7 @@
 			display: block;
 			width: 100%;
 			margin: 0.5rem 0;
-			padding-bottom: 0.4rem;
+			padding: 0 0 0.4rem;
 			outline: none;
 			font-size: 1rem;
 			letter-spacing: 0.75px;
@@ -124,15 +124,15 @@
 			<!-- <input type='hidden' name='redirect_to' value='https://coddywebmastering.github.io/form/' /> -->
 			<div class="field">
 				<label for="name">Имя</label>
-				<input type="text" name='name' id="name">
+				<input type="text" name='name' id="name" required />
 			</div>
 			<div class="field">
 				<label for="email">E-mail</label>
-				<input type="email" name="_replyto" id="email">
+				<input type="email" name="_replyto" id="email" required>
 			</div>
 			<div class="field">
 				<label for="message">Сообщение</label>
-				<textarea name="message" id="message" rows='3' cols='20' wrap='hard'></textarea>
+				<textarea name="message" id="message" rows='3' cols='20' wrap='hard' required></textarea>
 			</div>
 			<input type="submit" id="submit">
 		</form>
