@@ -31,9 +31,10 @@
   		$('.link').on('click', function() {
   			// $(this).html('123');
   			// console.log(this);
-  			var href = $(this).attr('href');
+  			var href = $.attr(this,'href');
   			console.log(href);
   			$('html, body').animate({scrollTop: $(href).offset().top}, 500);
+  			return false;
   		})
 
 
