@@ -6,6 +6,14 @@
 	<title>Menu</title>
 	<link rel="stylesheet" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+	<style>
+		.not-active {
+		  pointer-events: none;
+		  cursor: default;
+		  text-decoration: none;
+		  color: #aaaaaa;
+		}
+	</style>
 </head>
 <body>
 	<div class="wrapper">
@@ -27,18 +35,31 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script>
-  	$(document).ready(
-  		$('.link').on('click', function() {
-  			// $(this).html('123');
-  			// console.log(this);
-  			var href = $.attr(this,'href');
-  			console.log(href);
-  			$('html, body').animate({scrollTop: $(href).offset().top}, 500);
-  			return false;
-  		})
+  	$(document).ready(function() {
+  		
+  		var windowHeight = $(window).height();
 
+  		$('.link').on('click', 
+  			function() {
+  				
+  				$('.link').each(function() {$(this).addClass('not-active')});
 
-  	)
+  				var href = $.attr(this,'href'),
+				scrollTop = Math.abs($(document).scrollTop() - $(href).offset().top) / windowHeight;
+				
+		  		$('html, body').animate({
+		  			scrollTop: $(href).offset().top,
+		  		}, 300*scrollTop);
+		  		
+		  		setTimeout(function() {
+		  			$('.link').each(function() { $(this).removeClass('not-active'); });
+		  		}, 300*scrollTop);
+		  		
+	  			return false;
+  			}
+  		)
+
+  	})
   </script>
 </body>
 </html>
