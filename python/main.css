@@ -1,0 +1,86 @@
+body,html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Roboto';
+}
+
+.overlay {
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+
+}
+#header {
+	background-image: url(img.jpeg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	height: 100%;
+}
+#text {
+	color: white;
+	font-size: 15vmin;
+	font-family: 'Roboto';
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 4px 4px 2px green;
+	z-index: 1;
+	user-select: none;
+}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#text:after {
+	content: '|';
+	animation: blink 0.7s infinite;
+	padding-left: 2px;
+}
+
+main {
+	max-width: 900px;
+	width: 90%;
+	margin: auto;
+	padding: 50px 0;
+}
+	
+h1 {
+	margin-top: 0;
+	font-size: 45px;	
+	letter-spacing: 0.5px;	
+	text-shadow: 1px 1px 1px green;
+}
+
+.text {
+	line-height: 1.5;	
+	letter-spacing: 0.4px;	
+	font-size: 20px;	
+}
+
+code {
+	font-size: 20px;
+	background-color: #eeeeee;
+	padding: 2px 8px;
+}
+
+.code {
+	display: block;
+}
+
+.comment {
+	color: green;
+}
