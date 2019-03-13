@@ -89,6 +89,7 @@ code {
 	padding: 10px 20px;
 	overflow: auto;
 	white-space: nowrap;
+	line-height: 1.5;
 }
 .code_text {
 	white-space: normal;
