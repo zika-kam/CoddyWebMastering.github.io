@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:400,900" rel="stylesheet">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id='header'>
+			<div class="overlay"></div>
+			<h1 id="text"></h1>
+		</header>
+		<main>
+			<div class="screen">
+				<h1>Списки в Python</h1>
+				<p class="text">Список - коллекция последовательных данных. Язык программирования Python предоставляет специальный набор методов для работы с ними.</p>
+				<p class="text">Для того чтобы создать пустой список напишем следующий код:</p>
+				<code class='code'>empty_list <span class="red">=</span> []</code>
+				<p class="text">Список чисел:</p>
+				<code class='code'>numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>, <span class="purple">11</span>, <span class="purple">5</span>]</code>
+				<p class="text">Список строк:</p>
+				<code class='code'>fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]</code>
+				<p class="text">Для того чтобы обратиться к элементу списка по его индексу (порядковому номеру, нумерация начинается с нуля):</p>
+				<code class="code">
+					fruits[<span class="purple">0</span>]
+					<br>
+					<span class="grey"># 'Apple'</span>
+					<br>
+					fruits[<span class="purple">1</span>]
+					<br>
+					<span class="grey"># 'Grape'</span>
+				</code>
+				<p class="text">Фунция <code><span class="blue">len</span>()</code> возвращает длину итерируемой </p>
+				<p class="text">Функция <code><span class="blue">list</span>()</code> создает список из любой итерируемой переменной. Итерируемая переменная - это переменная, по которой можно сделать цикл. Например, строка, список, словаь, кортеж, функция <code><span class="blue">range</span>()</code> и другие. Создадим список, состоящий из последовательных чисел от 0 до 10:</p>
+				<code class='code'>
+				sequence <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+				<br>
+				<span class="blue">print</span>(sequence)
+				<br>
+				<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+				</code>
+				<p class="text">Список четных последовательных чисел:</p>
+				<code class='code'>
+					sequence <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>,<span class="purple">10</span>,<span class="purple">2</span>))
+					<br>
+					<span class="blue">print</span>(sequence)
+					<br>
+					<span class="grey"># [0, 2, 4, 6, 8]</span>
+				</code>
+				<p class="text">Фунция <code><span class="blue">len</span>()</code> возвращает длину итерируемой переменной:</p>
+				<code class='code'>
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					<span class="blue">print</span>(<span class="blue">len</span>(fruits))
+					<br>
+					<span class="grey"># 5</span>
+					<br>
+					numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>]
+					<br>
+					<span class="blue">print</span>(<span class="blue">len</span>(numbers))
+					<br>
+					<span class="grey"># 3</span>
+				</code>
+				<p class="text">Рассмотрим методы работы со списками. Первый из них - <code><span class="blue">append</span>()</code>добавление элемента в конец списка:</p>
+				<code class='code'>
+					numbers <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>,<span class="purple">10</span>,<span class="purple">2</span>))
+					<br>
+					numbers.<span class="blue">append</span>(<span class="purple">200</span>)
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 200]</span>
+					<br>
+					numbers.<span class="blue">append</span>(<span class="purple">1</span>)
+					<br>
+					numbers.<span class="blue">append</span>(<span class="purple">2</span>)
+					<br>
+					numbers.<span class="blue">append</span>(<span class="purple">3</span>)
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 200, 1, 2, 3]</span>
+				</code>
+				<p class="text"><code><span class="blue">insert</span>()</code> добавляет элемент на выбранную вами позицию, например:</p>
+				<code class='code'>
+					numbers <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>,<span class="purple">10</span>,<span class="purple">2</span>))
+					<br>
+					<span class="grey"># Добавление элемента 999 на позицию с индексом 0</span>
+					<br>
+					numbers.<span class="blue">insert</span>(<span class="purple">0</span>,<span class="purple">999</span>)
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [999, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+				</code>
+				<p class="text"><code><span class="blue">pop</span>()</code> удаляет элемент по его индексу, например:</p>
+				<code class='code'>
+					numbers <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>,<span class="purple">10</span>,<span class="purple">2</span>))
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+					<br>
+					<span class="grey"># Чтобы удалить последний элемент, вызовем метод pop без аргументов</span>
+					<br>
+					numbers.<span class="blue">pop</span>()
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8]</span>
+					<br>
+					<span class="grey"># Чтобы удалить первый элемент, вызовем метод pop с нулем</span>
+					<br>
+					numbers.<span class="blue">pop</span>(<span class="purple">0</span>)
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [1, 2, 3, 4, 5, 6, 7, 8]</span>
+				</code>
+				<p class="text">Метод <code><span class="blue">remove</span>()</code> удаляет первый найденный по заданному значению элемент в списке.</p>
+				<code class='code'>
+					numbers <span class="red">=</span> [<span class="purple">100</span>, <span class="purple">200</span>, <span class="purple">500</span>, <span class="purple">999</span>]
+					<br>
+					numbers.<span class="blue">remove</span>(<span class="purple">200</span>)
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [100, 500, 999]</span>
+				</code>
+				<p class="text">Метод <code><span class="blue">count</span>(N)</code> позволяет посчитать количество элементов в списке со значение N </p>
+				<code class='code'>
+					numbers <span class="red">=</span> [<span class="purple">100</span>, <span class="purple">100</span>, <span class="purple">100</span>, <span class="purple">200</span>, <span class="purple">200</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">999</span>]
+					<br>
+					<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">100</span>))
+					<br>
+					<span class="grey"># 3</span>
+					<br>
+					<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">200</span>))
+					<br>
+					<span class="grey"># 2</span>
+					<br>
+					<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">500</span>))
+					<br>
+					<span class="grey"># 5</span>
+					<br>
+					<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">999</span>))		
+					<br>
+					<span class="grey"># 1</span>
+				</code>
+				<p class="text">Перебор значений элементов списка с помощью цикла <code><span class="blue">for</span></code></p>
+				<code class='code'>
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					<span class="blue">for</span> fruit <span class="red">in</span> fruits:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruit, end=<span class="yellow">' '</span>)
+					<br>
+					<span class="grey"># Apple Grape Peach Banan Orange</span>
+				</code>
+				<p class="text">Перебор индексов элементов списка с помощью цикла <code><span class="blue">for</span></code></p>
+				<code class="code">
+					<span class="blue">for</span> index <span class="red">in</span> <span class="blue">range</span>(<span class="blue">len</span>(fruits)):
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruits[index], end=<span class="yellow">' '</span>)
+					<br>
+					<span class="grey"># Apple Grape Peach Banan Orange</span>
+				</code>
+			</div>
+		</main>
+		<script>
+			
+			var name = 'Списки в Python',
+				text = document.getElementById('text');
+			
+			setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+			
+		</script>
+	</body>
+</html>
