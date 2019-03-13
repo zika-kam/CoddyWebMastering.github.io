@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Списки в Python</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
 		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:400,900" rel="stylesheet">
 		<link rel="stylesheet" href="main.css">
@@ -15,15 +15,27 @@
 		<main>
 			<div class="screen">
 				<h1>Списки в Python</h1>
-				<p class="text">Список - коллекция последовательных данных. Язык программирования Python предоставляет специальный набор методов для работы с ними.</p>
-				<p class="text">Для того чтобы создать пустой список напишем следующий код:</p>
+				<p class="text">Список - это тип данных для хранения последовательности элементов. Каждому элементу списка присваивается порядковый номер - его индекс. Первый индекс равен нулю, второй - единице и так далее. Основные операции для работы со списками - это индексирование, срезы, добавление и удаление элементов, а также проверка на наличие элемента в последовательности.</p>
+				<p class="text">Создание пустого списка выглядит так:</p>
 				<code class='code'>empty_list <span class="red">=</span> []</code>
-				<p class="text">Список чисел:</p>
+				<p class="text">Создадим список, состоящий из нескольких чисел:</p>
 				<code class='code'>numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>, <span class="purple">11</span>, <span class="purple">5</span>]</code>
-				<p class="text">Список строк:</p>
+				<p class="text">Настало время строковых переменных:</p>
 				<code class='code'>fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]</code>
-				<p class="text">Для того чтобы обратиться к элементу списка по его индексу (порядковому номеру, нумерация начинается с нуля):</p>
+				<p class="text">Не будем забывать и о дробях:</p>
+				<code class="code">fractions<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">2.72</span>, <span class="purple">1.41</span>, <span class="purple">1.73</span>, <span class="purple">17.9</span>]</code>
+				<p class="text">Мы можем создать список, состоящий из различных типов данных:</p>
 				<code class="code">
+					values<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">10</span>, <span class="yellow">'Hello world!'</span>, <span class="purple">False</span>, <span class="yellow">'Python is the best'</span>]
+				</code>
+				<p class="text">И такое возможно <code>(⊙_⊙)</code></p>
+				<code class="code">
+					list_of_lists<span class="red"> = </span>[[<span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">0</span>], [<span class="purple">11</span>, <span class="purple">2</span>, <span class="purple">10</span>], [<span class="purple">0</span>, <span class="purple">19</span>, <span class="purple">27</span>]]
+				</code>
+				<p class="text">Что же такое индексирование? Это загадочное слово обозначает операцию обращения к элементу по его порядковому номеру (&nbsp;<code>( ･ω･)ア</code> напоминаю, что нумерация начинается с нуля). Проиллюстрируем это на примере:</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
 					fruits[<span class="purple">0</span>]
 					<br>
 					<span class="grey"># 'Apple'</span>
@@ -31,20 +43,62 @@
 					fruits[<span class="purple">1</span>]
 					<br>
 					<span class="grey"># 'Grape'</span>
-				</code>
-				<p class="text">Функция <code><span class="blue">list</span>()</code> создает список из любой итерируемой переменной. Итерируемая переменная - это переменная, по которой можно сделать цикл. Например, строка, список, словарь, кортеж, функция <code><span class="blue">range</span>()</code> и другие. Создадим список, состоящий из последовательных чисел от 0 до 10:</p>
-				<code class='code'>
-				sequence <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
-				<br>
-				<span class="blue">print</span>(sequence)
-				<br>
-				<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
-				</code>
-				<p class="text">Список четных последовательных чисел:</p>
-				<code class='code'>
-					sequence <span class="red">=</span> <span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>,<span class="purple">10</span>,<span class="purple">2</span>))
 					<br>
-					<span class="blue">print</span>(sequence)
+					fruits[<span class="purple">4</span>]
+					<br>
+					<span class="grey"># 'Orange'</span>
+				</code>
+				<p class="text">Списки в Python являются изменяемым типом данных. Мы можем изменять содержимое каждой из ячеек:</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					fruits[<span class="purple">0</span>]<span class="red"> = </span><span class="yellow">'Watermelon'</span>
+					<br>
+					fruits[<span class="purple">3</span>]<span class="red"> = </span><span class="yellow">'Lemon'</span>
+					<br>
+					<span class="blue">print</span>(fruits)
+					<br>
+					<span class="grey"># ['Watermelon', 'Grape', 'Peach', 'Lemon', 'Orange']</span>
+				</code>
+				<p class="text">Индексирование работает и в обратную сторону. Как такое возможно? Всё просто, мы обращаемся к элементу списка по отрицательному индексу. Индекс с номером <code>-1</code> дает нам доступ к последнему элементу, <code>-2</code> к предпоследнему и так далее.</p>
+				<code class="code">
+					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+					<br>
+					fruit[<span class="red">-</span><span class="purple">1</span>]
+					<br>
+					<span class="grey"># 'Orange'</span>
+					<br>
+					fruit[<span class="red">-</span><span class="purple">2</span>]
+					<br>
+					<span class="grey"># 'Banan'</span>
+					<br>
+					fruit[<span class="red">-</span><span class="purple">3</span>]
+					<br>
+					<span class="grey"># 'Peach'</span>
+					<br>
+					fruit[<span class="red">-</span><span class="purple">4</span>]
+					<br>
+					<span class="grey"># 'Grape'</span>
+				</code>
+				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закрепления <code>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]</code></p>
+				<p class="text">А есть еще способы? Да, есть. Первый из них — создание списка с помощью функции <code>list()</code> В неё мы можем передать любой итерируемый объект (да-да, тот самый по которому можно запустить цикл <code>(• ᵕ •)</code> )</p>
+				<p class="text">Рассмотрим несколько примеров:</p>
+				<code class="code">
+					letters<span class="red"> = </span><span class="blue">list</span>(<span class="yellow">'abcdef'</span>)
+					<br>
+					numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+					<br>
+					even_numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>, <span class="purple">10</span>, <span class="purple">2</span>))
+					<br>
+					<span class="blue">print</span>(letters)
+					<br>
+					<span class="grey"># ['a', 'b', 'c', 'd', 'e', 'f']</span>
+					<br>
+					<span class="blue">print</span>(numbers)
+					<br>
+					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+					<br>
+					<span class="blue">print</span>(even_numbers)
 					<br>
 					<span class="grey"># [0, 2, 4, 6, 8]</span>
 				</code>
