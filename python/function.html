@@ -219,6 +219,35 @@
 					<br>
 					<span class="grey"># Salute, Kate</span>
 				</code>
+				<code class="code">
+					n<span class="red"> = </span>[<span class="purple">1</span>,<span class="purple">1</span>,<span class="purple">1</span>,<span class="purple">1</span>,<span class="purple">1</span>,<span class="purple">1</span>,<span class="purple">1.09019209</span>]
+<br>
+<span class="blue">def</span> <span class="green">serialize</span>(a):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res<span class="red"> = </span>[]
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if</span> a[<span class="purple">0</span>] <span class="red">==</span> <span class="purple">1</span>:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span class="blue">append</span>(<span class="purple">0</span>)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;c<span class="red"> = </span><span class="purple">1</span>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">for</span> i in <span class="blue">range</span>(<span class="purple">0</span>,<span class="blue">len</span>(a) <span class="red">-</span> <span class="purple">1</span>):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if</span> a[i] <span class="red">==</span> a[i <span class="red">+</span> <span class="purple">1</span>]:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c <span class="red"><span class="red">+</span>=</span> <span class="purple">1</span>   
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">else</span>:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res.<span class="blue">append</span>(c)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c<span class="red"> = </span><span class="purple">1</span>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res.<span class="blue">append</span>(c)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return</span> res
+				</code>
 			</div>
 		</main>
 		<script>
