@@ -87,9 +87,9 @@ code {
 .code {
 	display: block;
 	padding: 10px 20px;
+	line-height: 1.5;
 	overflow: auto;
 	white-space: nowrap;
-	line-height: 1.5;
 }
 .code_text {
 	white-space: normal;
@@ -118,4 +118,8 @@ code {
 .orange {
 	font-style: italic;
 	color: #fc9968;
+}
+
+.purple {
+	color: #aa9ef2;
 }
