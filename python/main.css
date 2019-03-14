@@ -1,7 +1,7 @@
 body,html {
 	height: 100%;
 	margin: 0;
-	font-family: 'Roboto';
+	font-family: 'Rubik', sans-serif;
 	
 }
 
@@ -46,7 +46,7 @@ body,html {
 #text {
 	color: white;
 	font-size: 12vmin;
-	font-family: 'Roboto';
+	
 
 	font-weight: bold;
 	text-align: center;
@@ -85,6 +85,11 @@ h1 {
 .text {
 	line-height: 1.5;		
 	font-size: 18px;	
+	/*text-align: justify;*/
+	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 code {
