@@ -237,8 +237,8 @@
 			down.addEventListener('click', function() {	    
 				var currentPos = window.scrollY || window.screenTop,
 					pos = document.querySelector('main').offsetTop,
-					id = setInterval(frame, 15),
-					step = (pos - currentPos) / 30;
+					id = setInterval(frame, 10),
+					step = (pos - currentPos) / 40;
 				function frame() {
 					if (currentPos > pos)
 						clearInterval(id);
@@ -247,7 +247,6 @@
 						window.scrollTo(0, currentPos)
 					}
 				}
-				return false;
 			})
 		</script>
 	</body>

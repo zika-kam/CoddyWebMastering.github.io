@@ -21,12 +21,12 @@
 		<main>
 			<div class="screen">
 				<h1>Списки в Python</h1>
-				<p class="text">Список - это тип данных для хранения последовательности элементов. Каждому элементу списка присваивается порядковый номер - его индекс. Первый индекс равен нулю, второй - единице и так далее. Основные операции для работы со списками - это индексирование, срезы, добавление и удаление элементов, а также проверка на наличие элемента в последовательности.</p>
-				<p class="text">Создание пустого списка выглядит так:</p>
+				<p class="text">Список - это тип данных для хране&shy;ния последовательности элементов. Каждому элементу списка присваи&shy;вается поряд&shy;ковый номер - его индекс. Первый индекс равен нулю, второй - единице и так далее. Основные операции для работы со списками - это индексиро&shy;вание, срезы, добавление и удаление элементов, а также проверка на наличие элемента в последователь&shy;ности.</p>
+				<p class="text">Создание пустого списка выгля&shy;дит так:</p>
 				<code class='code'>empty_list <span class="red">=</span> []</code>
 				<p class="text">Создадим список, состоящий из нескольких чисел:</p>
 				<code class='code'>numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>, <span class="purple">11</span>, <span class="purple">5</span>]</code>
-				<p class="text">Настало время строковых переменных:</p>
+				<p class="text">Настало время строковых перемен&shy;ных:</p>
 				<code class='code'>fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]</code>
 				<p class="text">Не будем забывать и о дробях:</p>
 				<code class="code">fractions<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">2.72</span>, <span class="purple">1.41</span>, <span class="purple">1.73</span>, <span class="purple">17.9</span>]</code>
@@ -38,7 +38,7 @@
 				<code class="code">
 					list_of_lists<span class="red"> = </span>[[<span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">0</span>], [<span class="purple">11</span>, <span class="purple">2</span>, <span class="purple">10</span>], [<span class="purple">0</span>, <span class="purple">19</span>, <span class="purple">27</span>]]
 				</code>
-				<p class="text">Что же такое индексирование? Это загадочное слово обозначает операцию обращения к элементу по его порядковому номеру (&nbsp;<code>( ･ω･)ア</code> напоминаю, что нумерация начинается с нуля). Проиллюстрируем это на примере:</p>
+				<p class="text">Что же такое индексирование? Это загадочное слово обозна&shy;чает операцию обращения к элементу по его порядковому номеру (&nbsp;<code>( ･ω･)ア</code> напоминаю, что нумерация начи&shy;нается с нуля). Проиллюстрируем это на примере:</p>
 				<code class="code">
 					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
 					<br>
@@ -54,7 +54,7 @@
 					<br>
 					<span class="grey"># 'Orange'</span>
 				</code>
-				<p class="text">Списки в Python являются изменяемым типом данных. Мы можем изменять содержимое каждой из ячеек:</p>
+				<p class="text">Списки в Python являются изме&shy;няемым типом данных. Мы можем изменять содержимое каждой из ячеек:</p>
 				<code class="code">
 					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
 					<br>
@@ -66,7 +66,7 @@
 					<br>
 					<span class="grey"># ['Watermelon', 'Grape', 'Peach', 'Lemon', 'Orange']</span>
 				</code>
-				<p class="text">Индексирование работает и в обратную сторону. Как такое возможно? Всё просто, мы обращаемся к элементу списка по отрицательному индексу. Индекс с номером <code>-1</code> дает нам доступ к последнему элементу, <code>-2</code> к предпоследнему и так далее.</p>
+				<p class="text">Индексирование работает и в обратную сторону. Как такое возможно? Всё просто, мы обра&shy;щаемся к элементу списка по отрицательному индексу. Индекс с номером <code>-1</code> дает нам доступ к последнему элементу, <code>-2</code> к предпоследнему и так далее.</p>
 				<code class="code">
 					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
 					<br>
@@ -86,7 +86,7 @@
 					<br>
 					<span class="grey"># 'Grape'</span>
 				</code>
-				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закрепления:</p>
+				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закреп&shy;ления:</p>
 				<code class='code'>smiles<span class="red"> = </span>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]</code>
 				<p class="text">А есть еще способы? Да, есть. Первый из них — создание списка с помощью функции <code>list()</code> В неё мы можем передать любой итерируемый объект (да-да, тот самый по которому можно запустить цикл <code>(• ᵕ •)</code> )</p>
 				<p class="text">Рассмотрим несколько примеров:</p>
@@ -242,8 +242,8 @@
 			down.addEventListener('click', function() {	    
 				var currentPos = window.scrollY || window.screenTop,
 					pos = document.querySelector('main').offsetTop,
-					id = setInterval(frame, 15),
-					step = (pos - currentPos) / 30;
+					id = setInterval(frame, 10),
+					step = (pos - currentPos) / 40;
 				function frame() {
 					if (currentPos > pos)
 						clearInterval(id);
@@ -252,7 +252,6 @@
 						window.scrollTo(0, currentPos)
 					}
 				}
-				return false;
 			})
 
 			

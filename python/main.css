@@ -68,12 +68,16 @@ h1 {
 
 .text {
 	line-height: 1.5;		
-	font-size: 20px;	
-	text-align: justify;
+	font-size: 18px;	
+	/*text-align: justify;*/
+	-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 code {
-	font-size: 20px;
+	font-size: 18px;
 	background-color: #2c292d;
 	color: #ffffff;
 	padding: 3px 6px;
