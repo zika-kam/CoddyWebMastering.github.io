@@ -197,7 +197,7 @@ code {
 
 @media all and (max-width: 768px) {
 	#text {
-		font-size: 9.5vmin;
+		font-size: 9vmin;
 	}
 	#down {
 		font-size: 12vmin;
