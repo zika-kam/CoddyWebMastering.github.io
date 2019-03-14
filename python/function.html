@@ -20,15 +20,15 @@
 		<main>
 			<div class="screen">
 				<h1>Функции в Python</h1>
-				<p class="text">Функция - это именованный блок кода, к которому можно обратиться из любого места программы. Функция является объектом, принимающим аргументы и возвращающий значение</p>
-				
-				<p class="text">Функцию можно также назвать шаблоном для решения какой-либо задачи. Разберем следующую задачу:</p>
-				<code class='code code_text'>Дана строка, вместо пробелов у которой стоит специальный символ, например, *, необходимо заменить все специальные символы на пробелы.</code> 
+				<p class="text">Функция - это именованный блок кода, к которому можно обратиться из лю&shy;бого места программы. У функции есть имя и список входных парамет&shy;ров, а также воз&shy;вращаемое значение.</p>
+				<h2 class="subtitle">Дана строка...</h2>
+				<p class="text">Функция позволяет использо&shy;вать в про&shy;грамме один и тот же фрагмент кода нес&shy;колько раз. Разберем следующую задачу:</p>
+				<code class='code code_text'>Дана строка, вместо про&shy;белов у которой стоит специальный сим&shy;вол, на&shy;пример, *, необхо&shy;димо заменить все специальные сим&shy;волы на про&shy;белы.</code> 
 				<p class="text">У нас есть строки вида:</p>
 				<code class="code">
 					string <span class="red">=</span> <span class="yellow">'вот*такие*вот*строки'</span>
 				</code>
-				<p class="text">Код, решающий эту задачу:</p>
+				<p class="text">И код, решающий эту задачу:</p>
 				<code class="code">
 					text <span class="red">=</span>&nbsp;<span class="yellow">'some*string*with*unnecessery*symbols'</span>
 					<br>
@@ -53,7 +53,7 @@
 					<br>
 					result = <span class="yellow">' '</span>.<span class="blue">join</span>(text.<span class="blue">split</span>(<span class="yellow">'*'</span>))
 				</code>
-				<p class="text">Оба этих способа прекрасно работают до тех пор, пока у нас одна входная строка. А если строк несколько?</p>
+				<p class="text">Оба этих способа прекрасно рабо&shy;тают до тех пор, пока у нас одна вход&shy;ная строка. А если строк несколько?</p>
 				<code class="code">
 					<span class="grey"># ???</span>
 					<br>
@@ -82,8 +82,9 @@
 					<br>
 					results = [<span class="yellow">' '</span>.<span class="blue">join</span>(line.<span class="blue">split</span>(<span class="yellow">'*'</span>)) <span class="blue">for</span> line <span class="red">in</span> lines]
 				</code>
-				<p class="text">А если "лишний символ" для каждой строки будет различным? Тогда придется обрабатывать каждую строку отдельно. Чтобы сделать код, приведенный выше, универсальным нам необходимы функции.</p>
-				<p class="text">Рассмотрим синтаксис объявления функции:</p>
+				<p class="text">А если "лишний символ" для каждой строки будет различ&shy;ным? Тогда придется обрабаты&shy;вать каждую строку отдельно. Чтобы сделать код, приведен&shy;ный выше, универсальным нам необходимы функции.</p>
+				<h2 class="subtitle">Объявление функции</h2>
+				<p class="text">Рассмотрим синтаксис объявле&shy;ния функции:</p>
 				<code class='code'>
 					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name):
 					<br>
@@ -108,7 +109,7 @@
 					<br>
 					<span class="grey"># Hello, Kate</span>
 				</code>
-				<p class="text">Перед объявлением имени функции <code>greeting</code> пишется служебное слово <code>def</code>, а после имени функции обязательно записываются круглые скобки, в которые передается параметр <code>name</code></p>
+				<p class="text">Перед объявлением имени функции <code>greeting</code> пишется служебное слово <code>def</code>, а после имени функции обяза&shy;тельно записываются круглые скобки, в которые передается параметр <code>name</code></p>
 				<p class="text">Типичное объявление функции в Python выглядит так:</p>
 				<code class="code">
 					<span class="blue">def</span> <span class="green">function_name</span>(<span class="orange">argument1, argument2, ...</span>):
@@ -154,7 +155,8 @@
 					<br>
 					<span class="grey"># 20 10800 3</span>
 				</code>
-				<p class="text">А теперь вернемся к примеру разобранному в начале статьи. Наша функция, назовем ее <code>removeSymbol</code>, будет принимать в качестве параметров символ, который нужно заменить на пробел, и строку, содержащую этот самый символ.</p>
+				<h2 class="subtitle">Решение задачи "лишнего сим&shy;вола"</h2>
+				<p class="text">А теперь вернемся к примеру разо&shy;бран&shy;ному в начале статьи. Наша функция, назовем ее <code>removeSymbol</code>, будет прини&shy;мать в качестве пара&shy;метров символ, который нужно заме&shy;нить на пробел, и строку, содер&shy;жа&shy;щую этот самый символ.</p>
 				<code class="code">
 					<span class="blue">def</span> <span class="green">removeSymbol</span>(<span class="orange">symbol, string</span>):
 					<br>
@@ -175,6 +177,7 @@
 					<br>
 					<span class="grey"># слишком много черточек</span>
 				</code>
+				<h2 class="subtitle">Аргументы по умолчанию</h2>
 				<p class="text">Рассмотрим еще раз функцию <code>greeting</code>. Перепишем её со служебным словом <code>return</code></p>
 				<code class='code'>
 					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name):
@@ -186,7 +189,7 @@
 					<br>
 					<span class="grey"># Hello, Alex</span>
 				</code>
-				<p class="text">Теперь функция <code>greeting</code> возвращает строковое значение, которое мы можем присвоить какой-нибудь переменной</p>
+				<p class="text">Теперь функция <code>greeting</code> возвращает строковое значе&shy;ние, которое мы можем прис&shy;воить какой-нибудь переменной</p>
 				<code class="code">
 					helloMax = <span class="blue">greeting</span>(<span class="yellow">'Max'</span>)
 					<br>
@@ -194,7 +197,7 @@
 					<br>
 					<span class="grey"># Hello, Max</span>
 				</code>
-				<p class="text">Но если мы приветствовать каждого пользователя по-своему? Тогда нам нужно передать в <code>greeting</code> еще один аргумент</p>
+				<p class="text">Но если мы приветствовать каждого пользователя по-своему? Тогда нам нужно пере&shy;дать в <code>greeting</code> еще один аргумент</p>
 				<code class='code'>
 					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name, hello):
 					<br>
@@ -209,7 +212,7 @@
 					<br>
 					<span class="grey"># Salute, Kate</span>
 				</code>
-				<p class="text">А что если пользователю неважно, как мы его поприветствуем? Тогда логично было бы по умолчанию использовать какое-то одно приветствие и иногда его изменять. В программировании эта концепция называется "аргумент по умолчанию". Если в вызов функции не передали одного или нескольких аргументов, то будут использованы аргументы по умолчанию.</p>
+				<p class="text">А что если пользователю неважно, как мы его попри&shy;ветст&shy;вуем? Тогда логично было бы по умолчанию использовать какое-то одно при&shy;ветст&shy;вие и иногда его изменять. В програм&shy;мировании эта концепция назы&shy;вается "аргумент по умол&shy;чанию". Если в вызов функции не передали одного или нес&shy;коль&shy;ких аргументов, то будут использованы аргументы по умолчанию.</p>
 				<code class='code'>
 					<span class="blue">def</span>&nbsp;<span class="green">greeting</span>(name, hello=<span class="yellow">'hello'</span>):
 					<br>
