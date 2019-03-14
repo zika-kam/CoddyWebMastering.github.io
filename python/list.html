@@ -16,6 +16,7 @@
 		<header id='header'>
 			<div class="overlay"></div>
 			<h1 id="text"></h1>
+			<button id="down">﹀</button>
 		</header>
 		<main>
 			<div class="screen">
@@ -85,7 +86,8 @@
 					<br>
 					<span class="grey"># 'Grape'</span>
 				</code>
-				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закрепления <code>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]</code></p>
+				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закрепления:</p>
+				<code class='code'>smiles<span class="red"> = </span>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]</code>
 				<p class="text">А есть еще способы? Да, есть. Первый из них — создание списка с помощью функции <code>list()</code> В неё мы можем передать любой итерируемый объект (да-да, тот самый по которому можно запустить цикл <code>(• ᵕ •)</code> )</p>
 				<p class="text">Рассмотрим несколько примеров:</p>
 				<code class="code">
@@ -229,10 +231,30 @@
 		</main>
 		<script>
 			
-			var name = 'Списки в Python',
-				text = document.getElementById('text');
+			const name = 'Списки в Python',
+				  text = document.getElementById('text'),
+				  down = document.getElementById('down'),
+				  framesCount = 30,
+				  animationTime = 300;
 			
 			setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+
+			down.addEventListener('click', function() {	    
+				var currentPos = window.scrollY || window.screenTop,
+					pos = document.querySelector('main').offsetTop,
+					id = setInterval(frame, 15),
+					step = (pos - currentPos) / 30;
+				function frame() {
+					if (currentPos > pos)
+						clearInterval(id);
+					else {
+						currentPos+=step;
+						window.scrollTo(0, currentPos)
+					}
+				}
+				return false;
+			})
+
 			
 		</script>
 	</body>

@@ -123,3 +123,50 @@ code {
 .purple {
 	color: #aa9ef2;
 }
+
+@keyframes down {
+	0% {
+		transform: translate(0,0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	
+	90% {
+		opacity: 1
+	}
+	100% {
+		transform: translate(0,8vmin);
+		opacity: 0;
+	}
+}
+
+#down {
+	position: absolute;
+	animation: down 1.5s infinite linear both;
+	padding: 15px 20px 0;
+	bottom: 6vmin;
+	background-color: transparent;
+	border: none;
+	font-size: 8vmin;
+	font-weight: bold;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+	z-index: 1;
+	color: #ffffff;
+	transition: 0.4s;
+}
+
+
+#down:active {
+	color: #ff6189;
+}
+@media all and (pointer: fine) {
+	#down:hover {
+		-webkit-animation-play-state: paused;
+		-o-animation-play-state: paused;
+		animation-play-state: paused;
+	}
+}
