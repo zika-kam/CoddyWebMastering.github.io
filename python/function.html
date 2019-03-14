@@ -227,27 +227,32 @@
 				
 			</div>
 		</main>
+		<script src='js/smoothscroll.js' async></script>
 		<script>
-			
-			var name = 'Функции в Python',
-				text = document.getElementById('text');
-			
-			setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 250*index)),500)
-			
-			down.addEventListener('click', function() {	    
-				var currentPos = window.scrollY || window.screenTop,
-					pos = document.querySelector('main').offsetTop,
-					id = setInterval(frame, 10),
-					step = (pos - currentPos) / 40;
-				function frame() {
-					if (currentPos > pos)
-						clearInterval(id);
-					else {
-						currentPos+=step;
-						window.scrollTo(0, currentPos)
-					}
-				}
-			})
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Функции в Python',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 250*index)),500)
+				
+				down.addEventListener('click', function() {	 
+
+					// if   
+					document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) 
+					// var currentPos = window.scrollY || window.screenTop,
+					// 	pos = document.querySelector('main').offsetTop,
+					// 	id = setInterval(frame, 10),
+					// 	step = (pos - currentPos) / 40;
+					// function frame() {
+					// 	if (currentPos > pos)
+					// 		clearInterval(id);
+					// 	else {
+					// 		currentPos+=step;
+					// 		window.scrollTo(0, currentPos)
+					// 	}
+					// }
+				})
+			});
 		</script>
 	</body>
 </html>

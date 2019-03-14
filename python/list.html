@@ -229,30 +229,32 @@
 				</code>
 			</div>
 		</main>
+		<script src='js/smoothscroll.js'></script>
 		<script>
-			
-			const name = 'Списки в Python',
-				  text = document.getElementById('text'),
-				  down = document.getElementById('down'),
-				  framesCount = 30,
-				  animationTime = 300;
-			
-			setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Функции в Python',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 250*index)),500)
+				
+				down.addEventListener('click', function() {	 
 
-			down.addEventListener('click', function() {	    
-				var currentPos = window.scrollY || window.screenTop,
-					pos = document.querySelector('main').offsetTop,
-					id = setInterval(frame, 10),
-					step = (pos - currentPos) / 40;
-				function frame() {
-					if (currentPos > pos)
-						clearInterval(id);
-					else {
-						currentPos+=step;
-						window.scrollTo(0, currentPos)
-					}
-				}
-			})
+					// if   
+					document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) 
+					// var currentPos = window.scrollY || window.screenTop,
+					// 	pos = document.querySelector('main').offsetTop,
+					// 	id = setInterval(frame, 10),
+					// 	step = (pos - currentPos) / 40;
+					// function frame() {
+					// 	if (currentPos > pos)
+					// 		clearInterval(id);
+					// 	else {
+					// 		currentPos+=step;
+					// 		window.scrollTo(0, currentPos)
+					// 	}
+					// }
+				})
+			});
 
 			
 		</script>
