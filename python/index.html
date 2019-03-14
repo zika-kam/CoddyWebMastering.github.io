@@ -1,110 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Учебник Python</title>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
-		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:400,900" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="yandex-verification" content="9ac4fb38cc221824" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+		
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header id='header'>
 			<div class="overlay"></div>
-			<h1 id="text"></h1>
+			<p id="text"></p>
+			<button id="down">﹀</button>
 		</header>
 		<main>
-			<div class="screen">
-				<h1>Списки в Python</h1>
-				<p class="text">Список - коллекция последовательных данных. Язык программирования Python предоставляет специальный набор методов для работы с ними.</p>
-				<p class="text">Для того чтобы создать пустой список напишем следующий код:</p>
-				<code class='code'>empty_list = []</code>
-				<p class="text">Список чисел:</p>
-				<code class='code'>numbers = [40, 20, 90, 11, 5]</code>
-				<p class="text">Список строк:</p>
-				<code class='code'>fruits = ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</code>
-				<p class="text">Для того чтобы обратиться к элементу списка по его индексу (порядковому номеру, нумерация начинается с нуля):</p>
-				<code class="code">fruits[0]</code>
-				<code class="code"># 'Apple'</code>
-				<code class="code">fruits[1]</code>
-				<code class="code"># 'Grape'</code>
-				<p class="text">Фунция <code>len()</code> возвращает длину итерируемой </p>
-				<p class="text">Функция <code>list()</code> создает список из любой итерируемой переменной. Итерируемая переменная - это переменная, по которой можно сделать цикл. Например, строка, список, словаь, кортеж, функция <code>range()</code> и другие. Создадим список, состоящий из последовательных чисел от 0 до 10:</p>
-				<code class='code'>sequence = list(range(10))</code>
-				<code class="code">print(sequence)</code>
-				<code class='code comment'># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>
-				<p class="text">Список четных последовательных чисел:</p>
-				<code class='code'>sequence = list(range(0,10,2))</code>
-				<code class="code">print(sequence)</code>
-				<code class='code comment'># [0, 2, 4, 6, 8]</code>
-				<p class="text">Фунция <code>len()</code> возвращает длину итерируемой переменной:</p>
-				<code class='code'>fruits = ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</code>
-				<code class="code">print(len(fruits))</code>
-				<code class="code"># 5</code>
-				<code class='code'>numbers = [40, 20, 90]</code>
-				<code class="code">print(len(numbers))</code>
-				<code class="code"># 3</code>
-				<p class="text">Рассмотрим методы работы со списками. Первый из них - <code>append</code> добавление элемента в конец списка:</p>
-				<code class='code'>numbers = list(range(10))</code>
-				<code class='code'>numbers.append(200)</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 200]</code>
-				<code class='code'>numbers.append(1)</code>
-				<code class='code'>numbers.append(2)</code>
-				<code class='code'>numbers.append(3)</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 200, 1, 2, 3]</code>
-				<p class="text"><code>insert</code> добавляет элемент на выбранную вами позицию, например:</p>
-				<code class='code'>numbers = list(range(10))</code>
-				<code class='code comment'># Добавление элемента 999 на позицию с индексом 0</code>
-				<code class='code'>numbers.insert(0, 999)</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [999, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>
-				<p class="text"><code>pop</code> удаляет элемент по его индексу, например:</p>
-				<code class='code'>numbers = list(range(10))</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>
-				<code class='code comment'># Чтобы удалить последний элемент, вызовем метод pop без аргументов</code>
-				<code class='code'>numbers.pop()</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [0, 1, 2, 3, 4, 5, 6, 7, 8]</code>
-				<code class='code comment'># Чтобы удалить первый элемент, вызовем метод pop с нулем</code>
-				<code class='code'>numbers.pop(0)</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [1, 2, 3, 4, 5, 6, 7, 8]</code>
-				<p class="text">Метод <code>remove</code> удаляет первый найденный по заданному значению элемент в списке.</p>
-				<code class='code'>numbers = [100, 200, 500, 999]</code>
-				<code class='code'>numbers.remove(200)</code>
-				<code class='code'>print(numbers)</code>
-				<code class='code comment'># [100, 500, 999]</code>
-				<p class="text">Метод <code>count(N)</code> позволяет посчитать количество элементов в списке со значение N </p>
-				<code class='code'>numbers = [100, 100, 100, 200, 200, 500, 500, 500, 500, 500, 999]</code>
-				<code class='code'>print(numbers.count(100))</code>
-				<code class='code comment'># 3</code>
-				<code class='code'>print(numbers.count(200))</code>
-				<code class='code comment'># 2</code>
-				<code class='code'>print(numbers.count(500))</code>
-				<code class='code comment'># 5</code>
-				<code class='code'>print(numbers.count(999))</code>			
-				<code class='code comment'># 1</code>
-				<p class="text">Перебор значений элементов списка с помощью цикла <code>for</code></p>
-				<code class='code'>fruits = ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</code>
-				<code class="code">&nbsp;</code>
-				<code class="code">for i in fruits:</code>
-				<code class="code">&nbsp;&nbsp;&nbsp;&nbsp;print(i, end=' ')</code>
-				<code class='code comment'># Apple Grape Peach Banan Orange</code>
-				<p class="text">Перебор индексов элементов списка с помощью цикла <code>for</code></p>
-				<code class="code">for i in range(len(fruits)):</code>
-				<code class="code">&nbsp;&nbsp;&nbsp;&nbsp;print(fruits[i], end=' ')</code>
-				<code class='code comment'># Apple Grape Peach Banan Orange</code>
-			</div>
+			<h1>Почему нужно научиться программировать?</h1>
+			<code class="code"><span class="yellow">Во-первых</span>, программирование - это топ! (♡‿♡)</code>
+			<br>
+			<code class="code"><span class="blue">Во-вторых</span>, смотри первый пункт ( ͡° ͜ʖ ͡°) </code>
+			<br>
+			<code class="code"><span class="red">В-третьих</span>, можно всем говорить, что ты - программист 《 / 》</code>
+			<br>
+			<code class="code"><span class="green">В-четвертых</span>, ты же этого всегда хотел, не так ли?</code>
+			<h2 class="subtitle">Что можно почитать?</h2>
+			<a href="list.html" target='_blank' class="code link green">1. Что такое список?</a>
+			<a href="function.html" target='_blank' class="code link yellow">2. Для чего нужны функции?</a>
 		</main>
+		<script src='js/smoothscroll.js'></script>
 		<script>
-			
-			var name = 'Списки в Python',
-				text = document.getElementById('text');
-			
-			setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
-			
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Учебник Python',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+				
+				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) )
+			});
 		</script>
 	</body>
 </html>
